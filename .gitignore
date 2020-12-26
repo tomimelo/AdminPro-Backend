@@ -1,5 +1,5 @@
 node_modules/
 .env
 uploads/hospitales/**
-uploads/usuarios/**
 uploads/medicos/**
+uploads/usuarios/**
