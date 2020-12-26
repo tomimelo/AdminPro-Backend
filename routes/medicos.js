@@ -8,6 +8,7 @@ const { validarJWT } = require("../middlewares/validar-jwt");
 
 const {
     getMedicos,
+    getMedico,
     crearMedico,
     actualizarMedico,
     borrarMedico
@@ -15,7 +16,8 @@ const {
 
 const router = Router();
 
-router.get("/", getMedicos);
+router.get("/", validarJWT, getMedicos);
+router.get("/:id", validarJWT, getMedico);
 
 router.post("/", 
     [
